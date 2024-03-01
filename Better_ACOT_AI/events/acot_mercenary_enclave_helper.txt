@@ -1,0 +1,147 @@
+namespace = acot_merc_helper
+
+# Give passive special resource income
+# Alternatively we could overwrite the country type, but that's obviously not desirable...
+country_event = {
+	id = acot_merc_helper.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = enclave_mercenary
+	}
+
+	immediate = {
+		IF = {
+			limit = {
+				has_technology = tech_mine_dark_matter
+			}
+			add_resource = {
+				sr_dark_matter = 1200
+			}
+		}
+		IF = {
+			limit = {
+				has_technology = tech_mine_dark_energy
+			}
+			add_resource = {
+				acot_sr_dark_energy = 1200
+			}
+		}
+		IF = {
+			limit = {
+				has_technology = tech_dark_matter_power_core_se
+			}
+			add_resource = {
+				acot_sr_stellarite = 1200
+			}
+		}
+		IF = {
+			limit = {
+				has_technology = tech_dark_matter_power_core_re
+			}
+			add_resource = {
+				acot_sr_runic_power = 1200
+			}
+		}
+	}
+}
+
+# Many ACOT gateway techs are triggered by events and thus have weight = 0.
+# Unfortunately this makes them ineligible for tech sharing.
+# This event gives them a chance to earn the tech if one of their random fleet are within the borders of empires that have them.
+country_event = {
+	id = acot_merc_helper.2
+	hide_window = yes
+
+	#is_triggered_only = yes
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	trigger = {
+		is_country_type = enclave_mercenary
+	}
+
+	immediate = {
+		random_owned_fleet = {
+			print_scope_effect = yes
+			limit = {
+				exists = solar_system.space_owner
+				solar_system.space_owner = {
+					print_scope_trigger = yes
+					has_technology = tech_dark_matter_power_core_dm
+				}
+			}
+			IF = {
+				limit = {
+					solar_system.space_owner = {
+						has_technology = tech_dark_matter_power_core_dm
+					}
+				}
+				random = {
+					chance = 50
+					root = {
+						give_technology = {
+							tech = tech_mine_dark_energy
+							message = no
+						}
+						give_technology = {
+							tech = tech_dark_matter_power_core_dm
+							message = no
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					solar_system.space_owner = {
+						has_technology = tech_dark_matter_power_core_ae
+					}
+				}
+				random = {
+					chance = 50
+					root = {
+						give_technology = {
+							tech = tech_dark_matter_power_core_ae
+							message = no
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					solar_system.space_owner = {
+						has_technology = tech_dark_matter_power_core_re
+					}
+				}
+				random = {
+					chance = 50
+					root = {
+						give_technology = {
+							tech = tech_dark_matter_power_core_re
+							message = no
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					solar_system.space_owner = {
+						has_technology = tech_dark_matter_power_core_se
+					}
+				}
+				random = {
+					chance = 50
+					root = {
+						give_technology = {
+							tech = tech_dark_matter_power_core_se
+							message = no
+						}
+					}
+				}
+			}
+		}
+	}
+}

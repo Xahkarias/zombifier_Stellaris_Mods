@@ -1,0 +1,13 @@
+﻿l_english:
+
+job_dm_clerk: "Dark Vendor"
+job_dm_clerk_plural: "Dark Vendors"
+job_dm_clerk_desc: "$job_dm_clerk_plural$ can and will attempt to sell you anything, often enough succesfull."
+mod_job_dm_clerk_add: "$job_dm_clerk$"
+job_dm_clerk_effect_desc: "£job_clerk£ $job_dm_clerk_plural$ produce £mod_trade_value_add£ §Y$TRADE_VALUE$§! and £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!"
+
+job_ae_clerk: "Vault-Tex Clerk"
+job_ae_clerk_plural: "Vault-Tex Clerks"
+job_ae_clerk_desc: "$job_ae_clerk_plural$ are amongst the best product sellers this galaxy has ever seen. You better get that vault, just in case..."
+mod_job_ae_clerk_add: "$job_ae_clerk$"
+job_ae_clerk_effect_desc: "£job_clerk£ $job_ae_clerk_plural$ produce £mod_trade_value_add£ §Y$TRADE_VALUE$§! and £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!"

@@ -1,0 +1,5 @@
+#on_colony_yearly_pulse = {
+#	events = {
+#		acot_corp_ai_helper.1
+#	}
+#}

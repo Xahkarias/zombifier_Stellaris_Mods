@@ -1,0 +1,116 @@
+@acot_resources_target = 10
+
+basic_economy_plan = {
+	subplan = {
+		set_name = "base dark matter"
+		potential = {
+			has_global_flag = acot_activated
+			has_technology = tech_dark_matter_generation
+			has_monthly_income = { resource = minerals value > @minerals_target }
+		}
+		income = {
+			sr_dark_matter = @acot_resources_target
+		}
+	}
+
+	subplan = {
+		set_name = "scaling dark matter"
+		scaling = yes
+		potential = {
+			has_global_flag = acot_activated
+			has_technology = tech_dark_matter_generation
+			has_monthly_income = { resource = minerals value > @minerals_target }
+		}
+		income = {
+			sr_dark_matter = @acot_resources_target
+		}
+	}
+
+	subplan = {
+		set_name = "base dark energy"
+		potential = {
+			has_global_flag = acot_activated
+			has_technology = tech_mine_dark_energy
+			has_monthly_income = { resource = energy value > @energy_target }
+		}
+		income = {
+			acot_sr_dark_energy = @acot_resources_target
+		}
+	}
+
+	subplan = {
+		set_name = "scaling dark energy"
+		scaling = yes
+		potential = {
+			has_global_flag = acot_activated
+			has_technology = tech_mine_dark_energy
+			has_monthly_income = { resource = energy value > @energy_target }
+		}
+		income = {
+			acot_sr_dark_energy = @acot_resources_target
+		}
+	}
+
+	subplan = {
+		set_name = "base stellarite"
+		potential = {
+			has_global_flag = acot_activated
+			has_technology = tech_dark_matter_power_core_se
+			has_monthly_income = {
+				resource = minerals value > @minerals_target
+				resource = energy value > @energy_target
+			}
+		}
+		income = {
+			acot_sr_stellarite = @acot_resources_target
+		}
+	}
+
+	subplan = {
+		set_name = "scaling stellarite"
+		scaling = yes
+		potential = {
+			has_global_flag = acot_activated
+			has_technology = tech_dark_matter_power_core_se
+			has_monthly_income = {
+				resource = minerals value > @minerals_target
+				resource = energy value > @energy_target
+			}
+		}
+		income = {
+			acot_sr_stellarite = @acot_resources_target
+		}
+	}
+
+	# AOT SPECIFIC
+	subplan = {
+		set_name = "base runic energy"
+		potential = {
+			has_global_flag = has_aot_mod
+			has_technology = tech_dark_matter_power_core_re
+			has_monthly_income = {
+				resource = minerals value > @minerals_target
+				resource = energy value > @energy_target
+			}
+		}
+		income = {
+			aot_sr_runic_power = @acot_resources_target
+		}
+	}
+
+	subplan = {
+		set_name = "scaling runic energy"
+		scaling = yes
+		potential = {
+			has_global_flag = has_aot_mod
+			has_technology = tech_dark_matter_power_core_re
+			has_monthly_income = {
+				resource = minerals value > @minerals_target
+				resource = energy value > @energy_target
+			}
+		}
+		income = {
+			aot_sr_runic_power = @acot_resources_target
+		}
+	}
+}

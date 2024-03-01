@@ -1,0 +1,299 @@
+acot_corp_upgrade_to_delta_building = {
+	IF = {
+		limit = {
+			branch_office_owner = {
+				has_technology = tech_fe_mineral_processing_plant
+			}
+			OR = {
+				has_holding {
+					holding = building_private_mining_consortium
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_mining_corp
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_mining_global
+					owner = branch_office_owner
+				}
+			}
+		}
+		remove_holding {
+			holding = building_private_mining_consortium
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_mining_consortium
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_mining_global
+			owner = branch_office_owner
+		}
+		add_holding = {
+			holding = building_delta_mining_corp
+			owner = branch_office_owner
+		}
+	}
+	IF = {
+		limit = {
+			branch_office_owner = {
+				has_technology = tech_fe_food_processing
+			}
+			OR = {
+				has_holding {
+					holding = building_food_conglomerate
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_food_enterprise
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_burger_enterprise
+					owner = branch_office_owner
+				}
+			}
+		}
+		remove_holding {
+			holding = building_food_conglomerate
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_food_enterprise
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_burger_enterprise
+			owner = branch_office_owner
+		}
+		add_holding = {
+			holding = building_delta_food_corp
+			owner = branch_office_owner
+		}
+	}
+	IF = {
+		limit = {
+			branch_office_owner = {
+				has_technology = tech_fe_factory
+			}
+			OR = {
+				has_holding {
+					holding = building_virtual_entertainment_studios
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_virtual_entertainment_publisher
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_virtual_entertainment_franchise
+					owner = branch_office_owner
+				}
+			}
+		}
+		remove_holding {
+			holding = building_virtual_entertainment_studios
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_virtual_entertainment_publisher
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_virtual_entertainment_franchise
+			owner = branch_office_owner
+		}
+		add_holding = {
+			holding = building_delta_consumer_goods_corp
+			owner = branch_office_owner
+		}
+	}
+	IF = {
+		limit = {
+			branch_office_owner = {
+				has_technology = tech_fe_alloy_foundry
+			}
+			OR = {
+				has_holding {
+					holding = building_private_shipyards
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_military_consortium
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_industrial_complex
+					owner = branch_office_owner
+				}
+			}
+		}
+		remove_holding {
+			holding = building_private_shipyards
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_military_consortium
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_industrial_complex
+			owner = branch_office_owner
+		}
+		add_holding = {
+			holding = building_delta_alloy_corp
+			owner = branch_office_owner
+		}
+	}
+	IF = {
+		limit = {
+			branch_office_owner = {
+				has_technology = tech_dm_stronghold
+			}
+			OR = {
+				has_holding {
+					holding = building_military_contractors
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_military_company
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_outer_heaven
+					owner = branch_office_owner
+				}
+			}
+		}
+		remove_holding {
+			holding = building_military_contractors
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_military_company
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_outer_heaven
+			owner = branch_office_owner
+		}
+		add_holding = {
+			holding = building_delta_army_corp
+			owner = branch_office_owner
+		}
+	}
+	IF = {
+		limit = {
+			branch_office_owner = {
+				has_technology = tech_dm_bureau
+			}
+			OR = {
+				has_holding {
+					holding = building_public_relations_office
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_telecom_corporation
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_global_communications
+					owner = branch_office_owner
+				}
+			}
+		}
+		remove_holding {
+			holding = building_public_relations_office
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_telecom_corporation
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_global_communications
+			owner = branch_office_owner
+		}
+		add_holding = {
+			holding = building_delta_unity_corp
+			owner = branch_office_owner
+		}
+	}
+	IF = {
+		limit = {
+			branch_office_owner = {
+				has_technology = tech_dark_mansion
+			}
+			OR = {
+				has_holding {
+					holding = building_amusement_megaplex
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_amusement_gigaplex
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_amusement_teraplex
+					owner = branch_office_owner
+				}
+			}
+		}
+		remove_holding {
+			holding = building_amusement_megaplex
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_amusement_gigaplex
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_amusement_teraplex
+			owner = branch_office_owner
+		}
+		add_holding = {
+			holding = building_delta_amenity_corp
+			owner = branch_office_owner
+		}
+	}
+	IF = {
+		limit = {
+			branch_office_owner = {
+				has_technology = tech_enigmatic_lab
+			}
+			OR = {
+				has_holding {
+					holding = building_private_research_initiative
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_research_consortium
+					owner = branch_office_owner
+				}
+				has_holding {
+					holding = building_bugged_research_global
+					owner = branch_office_owner
+				}
+			}
+		}
+		remove_holding {
+			holding = building_private_research_initiative
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_research_consortium
+			owner = branch_office_owner
+		}
+		remove_holding {
+			holding = building_bugged_research_global
+			owner = branch_office_owner
+		}
+		add_holding = {
+			holding = building_delta_research_corp
+			owner = branch_office_owner
+		}
+	}
+}
+

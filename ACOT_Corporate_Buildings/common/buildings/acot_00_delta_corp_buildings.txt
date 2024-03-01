@@ -1,0 +1,1608 @@
+###########################
+# Branch Office Buildings #
+###########################
+
+## REGULAR MEGACORP ##
+building_delta_mineral_corp = {
+	icon = building_fe_mineral_processing_plant
+
+	base_buildtime = 360
+
+	owner_type = corporate
+
+	category = resource
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = no
+		}
+	}
+
+	planet_modifier = {
+		job_acot_mineralman_add = 1
+		#planet_jobs_minerals_produces_mult = 0.05
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+			sr_dark_matter = 50
+		}
+		produces = {
+			minerals = 50
+		}
+		upkeep = {
+			energy = 10
+			sr_dark_matter = 1
+		}
+	}
+
+	prerequisites = {
+		tech_fe_mineral_processing_plant
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = no
+	}
+
+	upgrades = {
+		building_alpha_mineral_corp
+	}
+
+	ai_weight = {
+		factor = 5
+	}
+}
+
+building_delta_food_corp = {
+	icon = building_fe_food_processing_complex
+
+	base_buildtime = 360
+
+	owner_type = corporate
+
+	category = resource
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = no
+		}
+	}
+
+	planet_modifier {
+		job_acot_foodman_add = 1
+		#planet_jobs_food_produces_mult = 0.05
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+			sr_dark_matter = 50
+		}
+		produces = {
+			food = 50
+		}
+		upkeep = {
+			energy = 10
+			acot_sr_dark_energy = 0.5
+			sr_dark_matter = 0.5
+		}
+	}
+
+	prerequisites = {
+		tech_fe_food_processing
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = no
+	}
+
+	upgrades = {
+		building_alpha_food_corp
+	}
+
+	ai_weight = {
+		factor = 5
+	}#AI has many other sources for this resource
+}
+
+building_delta_consumer_goods_corp = {
+	icon = building_fe_factory
+
+	base_buildtime = 360
+
+	owner_type = corporate
+
+	category = manufacturing
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = no }
+	}
+
+	planet_modifier = {
+		#job_acot_artisan_add = 2
+		job_dm_clerk_add = 2
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 600
+			sr_dark_matter = 200
+		}
+		produces = {
+			consumer_goods = 30
+		}
+		upkeep = {
+			energy = 10
+			sr_dark_matter = 1
+		}
+	}
+
+	prerequisites = {
+		tech_fe_factory
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = no
+	}
+
+	upgrades = {
+		building_alpha_consumer_goods_corp
+	}
+
+	ai_weight = {
+		weight = 15
+		modifier = {
+			factor = 5
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value >= 10
+				}
+			}
+		}
+	}
+}
+
+building_delta_alloy_corp = {
+	icon = building_fe_alloy_forge
+
+	base_buildtime = 360
+
+	owner_type = corporate
+
+	category = manufacturing
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = no
+		}
+	}
+
+	planet_modifier = {
+		#job_acot_alloyman_add = 2
+		job_dm_clerk_add = 2
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 650
+			sr_dark_matter = 50
+		}
+		produces = {
+			alloys = 15
+		}
+		upkeep = {
+			energy = 10
+			sr_dark_matter = 1
+		}
+	}
+
+	prerequisites = {
+		tech_fe_alloy_foundry
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = no
+	}
+
+	upgrades = {
+		building_alpha_alloy_corp
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+building_delta_army_corp = {
+	icon = building_dm_stronghold
+
+	base_buildtime = 360
+
+	owner_type = corporate
+
+	category = army
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = no
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 200
+	}
+
+	army_modifier = {
+		army_starting_experience_add = 500
+	}
+
+	planet_modifier = {
+		job_acot_enforcer_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 400
+			sr_dark_matter = 100
+			acot_sr_dark_energy = 100
+		}
+		upkeep = {
+			energy = 10
+			sr_dark_matter = 1
+			acot_sr_dark_energy = 1
+		}
+	}
+
+	prerequisites = {
+		"tech_dm_stronghold"
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = no
+	}
+
+	upgrades = {
+		building_alpha_army_corp
+	}
+
+	ai_weight = {
+		factor = 15
+	}
+}
+
+building_delta_unity_corp = {
+	icon = building_dm_bureaucratic
+
+	base_buildtime = 360
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = unity
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = no }
+		has_global_flag = has_aot_mod
+	}
+
+	planet_modifier = {
+		job_dm_clerk_add = 2
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+			sr_dark_matter = 200
+		}
+		produces = {
+			unity = 30
+		}
+		upkeep = {
+			energy = 10
+			sr_dark_matter = 1
+			acot_sr_dark_energy = 1
+		}
+	}
+
+	prerequisites = {
+		tech_dm_bureau
+	}
+
+	upgrades = {
+		building_alpha_unity_corp
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = no
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+building_delta_research_corp = {
+	icon = building_enigmatic_lab
+
+	base_buildtime = 480
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = research
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = no }
+	}
+
+	planet_modifier = {
+		job_dm_clerk_add = 2
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+			sr_dark_matter = 50
+			acot_sr_dark_energy = 50
+		}
+		produces = {
+			physics_research = 30
+			engineering_research = 30
+			society_research = 30
+		}
+		upkeep = {
+			energy = 15
+			sr_dark_matter = 1
+			acot_sr_dark_energy = 1
+		}
+	}
+
+	prerequisites = {
+		tech_enigmatic_lab
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = no
+	}
+
+	upgrades = {
+		building_alpha_research_corp
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+building_delta_amenity_corp = {
+	icon = building_fe_dome
+
+	base_buildtime = 480
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = amenity
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = no }
+		branch_office_owner = { NOT = { has_origin = origin_toxic_knights } }
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 15
+		job_acot_entertainer_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 450
+			sr_dark_matter = 50
+		}
+		produces = {
+			energy = 50
+		}
+		upkeep = {
+			sr_dark_matter = 1
+			acot_sr_dark_energy = 1
+		}
+	}
+
+	prerequisites = {
+		tech_dark_mansion
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = no
+	}
+
+	upgrades = {
+		building_alpha_amenity_corp
+	}
+
+	ai_weight = {
+		weight = 10
+
+		modifier = {
+			weight = 0.5
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = energy
+					value > 50
+				}
+			}
+		}
+	}
+}
+
+building_delta_trade_corp = {
+	icon = building_dm_commercial_megaplex
+
+	base_buildtime = 480
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = no }
+	}
+
+	planet_modifier = {
+		branch_office_value_mult = 1
+		job_merchant_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+			sr_dark_matter = 200
+		}
+		upkeep = {
+			energy = 15
+			sr_dark_matter = 2
+		}
+	}
+
+	prerequisites = {
+		tech_dm_commercial_megaplex
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = no
+	}
+
+	upgrades = {
+		building_alpha_trade_corp
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+building_delta_embassy_corp = {
+	icon = building_dm_embassy
+
+	base_buildtime = 480
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = no }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	prerequisites = {
+		tech_dm_embassy
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = no
+	}
+
+	country_modifier = {
+		diplo_weight_economy_mult = 0.25
+	}
+
+	planet_modifier = {
+		job_dm_clerk_add = 2
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			energy = 400
+			minerals = 750
+			sr_dark_matter = 200
+		}
+		upkeep = {
+			energy = 15
+			sr_dark_matter = 3
+		}
+	}
+
+	upgrades = {
+		building_alpha_embassy_corp
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 10
+			branch_office_owner = {
+				is_galactic_community_member = yes
+			}
+		}
+	}
+}
+
+## CRIME MEGACORP ##
+building_delta_mineral_crim = {
+	icon = building_fe_mineral_processing_plant
+
+	base_buildtime = 360
+
+	owner_type = corporate
+
+	category = resource
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = yes
+		}
+	}
+
+	planet_modifier = {
+		planet_crime_add = 100
+		trade_value_add = 50
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+			sr_dark_matter = 50
+		}
+		produces = {
+			minerals = 50
+		}
+		upkeep = {
+			energy = 10
+			sr_dark_matter = 1
+		}
+	}
+
+	prerequisites = {
+		tech_fe_mineral_processing_plant
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = yes
+	}
+
+	upgrades = {
+		building_alpha_mineral_crim
+	}
+
+	ai_weight = {
+		factor = 5
+	}
+}
+
+building_delta_food_crim = {
+	icon = building_fe_food_processing_complex
+
+	base_buildtime = 360
+
+	owner_type = corporate
+
+	category = resource
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = yes
+		}
+	}
+
+	planet_modifier {
+		planet_crime_add = 100
+		trade_value_add = 50
+		#planet_jobs_food_produces_mult = 0.05
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+			sr_dark_matter = 50
+		}
+		produces = {
+			food = 50
+		}
+		upkeep = {
+			energy = 10
+			acot_sr_dark_energy = 0.5
+			sr_dark_matter = 0.5
+		}
+	}
+
+	prerequisites = {
+		tech_fe_food_processing
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = yes
+	}
+
+	upgrades = {
+		building_alpha_food_crim
+	}
+
+	ai_weight = {
+		factor = 5
+	}#AI has many other sources for this resource
+}
+
+building_delta_consumer_goods_crim = {
+	icon = building_fe_factory
+
+	base_buildtime = 360
+
+	owner_type = corporate
+
+	category = manufacturing
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = yes }
+	}
+
+	planet_modifier = {
+		planet_crime_add = 100
+		trade_value_add = 50
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 600
+			sr_dark_matter = 200
+		}
+		produces = {
+			consumer_goods = 30
+		}
+		upkeep = {
+			energy = 10
+			sr_dark_matter = 1
+		}
+	}
+
+	prerequisites = {
+		tech_fe_factory
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = yes
+	}
+
+	upgrades = {
+		building_alpha_consumer_goods_crim
+	}
+
+	ai_weight = {
+		weight = 15
+		modifier = {
+			factor = 5
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value >= 10
+				}
+			}
+		}
+	}
+}
+
+building_delta_alloy_crim = {
+	icon = building_fe_alloy_forge
+
+	base_buildtime = 360
+
+	owner_type = corporate
+
+	category = manufacturing
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = yes
+		}
+	}
+
+	planet_modifier = {
+		planet_crime_add = 100
+		trade_value_add = 50
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 650
+			sr_dark_matter = 50
+		}
+		produces = {
+			alloys = 15
+		}
+		upkeep = {
+			energy = 10
+			sr_dark_matter = 1
+		}
+	}
+
+	prerequisites = {
+		tech_fe_alloy_foundry
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = yes
+	}
+
+	upgrades = {
+		building_alpha_alloy_crim
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+building_delta_army_crim = {
+	icon = building_dm_stronghold
+
+	base_buildtime = 360
+
+	owner_type = corporate
+
+	category = army
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = yes
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 200
+	}
+
+	army_modifier = {
+		army_starting_experience_add = 500
+	}
+
+	planet_modifier = {
+		planet_crime_add = 160
+		job_acot_enforcer_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 400
+			sr_dark_matter = 100
+			acot_sr_dark_energy = 100
+		}
+		upkeep = {
+			energy = 10
+			sr_dark_matter = 1
+			acot_sr_dark_energy = 1
+		}
+	}
+
+	prerequisites = {
+		"tech_dm_stronghold"
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = yes
+	}
+
+	upgrades = {
+		building_alpha_army_crim
+	}
+
+	ai_weight = {
+		factor = 20
+	}
+}
+
+building_delta_unity_crim = {
+	icon = building_dm_bureaucratic
+
+	base_buildtime = 360
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = unity
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = yes }
+		has_global_flag = has_aot_mod
+	}
+
+	planet_modifier = {
+		planet_crime_add = 160
+		job_dm_clerk_add = 2
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+			sr_dark_matter = 200
+		}
+		produces = {
+			unity = 30
+		}
+		upkeep = {
+			energy = 10
+			sr_dark_matter = 1
+			acot_sr_dark_energy = 1
+		}
+	}
+
+	prerequisites = {
+		tech_dm_bureau
+	}
+
+	upgrades = {
+		building_alpha_unity_crim
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = yes
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+building_delta_research_crim = {
+	icon = building_enigmatic_lab
+
+	base_buildtime = 480
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = research
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = yes }
+	}
+
+	planet_modifier = {
+		planet_crime_add = 160
+		job_dm_clerk_add = 2
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+			sr_dark_matter = 50
+			acot_sr_dark_energy = 50
+		}
+		produces = {
+			physics_research = 30
+			engineering_research = 30
+			society_research = 30
+		}
+		upkeep = {
+			energy = 15
+			sr_dark_matter = 1
+			acot_sr_dark_energy = 1
+		}
+	}
+
+	prerequisites = {
+		tech_enigmatic_lab
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = yes
+	}
+
+	upgrades = {
+		building_alpha_research_crim
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+building_delta_amenity_crim = {
+	icon = building_fe_dome
+
+	base_buildtime = 480
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = amenity
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = yes }
+		branch_office_owner = { NOT = { has_origin = origin_toxic_knights } }
+	}
+
+	planet_modifier = {
+		planet_crime_add = 160
+		planet_amenities_add = 15
+		job_acot_entertainer_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 450
+			sr_dark_matter = 50
+		}
+		produces = {
+			energy = 50
+		}
+		upkeep = {
+			sr_dark_matter = 1
+			acot_sr_dark_energy = 1
+		}
+	}
+
+	prerequisites = {
+		tech_dark_mansion
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = yes
+	}
+
+	upgrades = {
+		building_alpha_amenity_crim
+	}
+
+	ai_weight = {
+		weight = 10
+
+		modifier = {
+			weight = 0.5
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = energy
+					value > 50
+				}
+			}
+		}
+	}
+}
+
+building_delta_trade_crim = {
+	icon = building_dm_commercial_megaplex
+
+	base_buildtime = 480
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = yes }
+	}
+
+	planet_modifier = {
+		planet_crime_add = 200
+		branch_office_value_mult = 1
+		job_merchant_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+			sr_dark_matter = 200
+		}
+		upkeep = {
+			energy = 15
+			sr_dark_matter = 2
+		}
+	}
+
+	prerequisites = {
+		tech_dm_commercial_megaplex
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = yes
+	}
+
+	upgrades = {
+		building_alpha_trade_crim
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+building_delta_embassy_crim = {
+	icon = building_dm_embassy
+
+	base_buildtime = 480
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = yes }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	country_modifier = {
+		spy_network_levels_add = 5
+	}
+
+	planet_modifier = {
+		job_dm_clerk_add = 2
+		pop_government_ethic_attraction = -0.5
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			energy = 400
+			minerals = 750
+			sr_dark_matter = 200
+		}
+		upkeep = {
+			energy = 15
+			sr_dark_matter = 3
+		}
+	}
+
+	prerequisites = {
+		tech_dm_embassy
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = yes
+	}
+
+	upgrades = {
+		building_alpha_embassy_crim
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+## GOSPEL MEGACORP ##
+
+building_delta_gospel_corp = {
+	icon = building_aot_fe_empyrean_shrine
+
+	base_buildtime = 360
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = unity
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_valid_civic = civic_gospel_of_the_masses
+			is_criminal_syndicate = no
+		}
+	}
+
+	planet_modifier = {
+		# TODO - Higher tiers
+		job_preacher_add = 2
+		pop_ethic_spiritualist_attraction_mult = 0.75
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 750
+			sr_dark_matter = 200
+			acot_sr_dark_energy = 200
+		}
+		upkeep = {
+			energy = 10
+			sr_dark_matter = 1
+			acot_sr_dark_energy = 1
+		}
+	}
+
+	prerequisites = {
+		tech_aot_fe_empyrean_shrine
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = no
+	}
+
+	upgrades = {
+		building_alpha_gospel_corp
+	}
+
+	ai_weight = {
+		weight = 250
+	}
+}
+
+building_delta_gospel_crim = {
+	icon = building_aot_fe_empyrean_shrine
+
+	base_buildtime = 360
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = unity
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_valid_civic = civic_gospel_of_the_masses
+			is_criminal_syndicate = yes
+		}
+	}
+
+	planet_modifier = {
+		# TODO - Higher tiers
+		job_preacher_add = 2
+		pop_ethic_spiritualist_attraction_mult = 0.75
+		planet_crime_add = 100
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 750
+			sr_dark_matter = 200
+			acot_sr_dark_energy = 200
+		}
+		upkeep = {
+			energy = 10
+			sr_dark_matter = 1
+			acot_sr_dark_energy = 1
+		}
+	}
+
+	prerequisites = {
+		tech_aot_fe_empyrean_shrine
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = yes
+	}
+
+	upgrades = {
+		building_alpha_gospel_crim
+	}
+
+	ai_weight = {
+		weight = 250
+	}
+}
+
+## SPECIAL ##
+
+building_delta_executive_retreat = {
+	icon = building_fe_mansion
+
+	base_buildtime = 600
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = amenity
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_ai = no
+		}
+	}
+
+	allow = {
+		num_pops >= 25
+	}
+
+	country_modifier = {
+		planet_amenities_mult = 0.5
+	}
+
+	planet_modifier = {
+		trade_value_mult = 0.25
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 1000
+			sr_dark_matter = 200
+			acot_sr_dark_energy = 200
+		}
+		upkeep = {
+			energy = 20
+			sr_dark_matter = 1
+			acot_sr_dark_energy = 1
+		}
+	}
+
+	prerequisites = {
+		tech_dark_mansion
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+	}
+
+	upgrades = {
+		building_alpha_executive_retreat
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+building_delta_xeno_tourism_agency = {
+	icon = building_affluence_center
+
+	base_buildtime = 600
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_ai = no
+		}
+	}
+
+	allow = {
+		num_pops >= 25
+	}
+
+	country_modifier = {
+		planet_immigration_pull_mult = 1
+	}
+
+	planet_modifier = {
+		trade_value_mult = 0.25
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 1000
+			sr_dark_matter = 200
+			acot_sr_dark_energy = 200
+		}
+		upkeep = {
+			energy = 20
+			sr_dark_matter = 2
+			acot_sr_dark_energy = 2
+		}
+	}
+
+	prerequisites = {
+		tech_dm_commercial_megaplex
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+	}
+
+	upgrades = {
+		building_alpha_xeno_tourism_agency
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+building_delta_imperial_concession_port = {
+	icon = building_dm_ancient_palace
+
+	base_buildtime = 600
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			OR = {
+				has_modifier = imperial_charter
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+		}
+	}
+
+	country_modifier = {
+		diplo_weight_economy_mult = 0.25
+	}
+
+	planet_modifier = {
+		branch_office_value_mult = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 1000
+			sr_dark_matter = 200
+			acot_sr_dark_energy = 200
+		}
+		produces = {
+			energy = 40
+			sr_dark_matter = 4
+			acot_sr_dark_energy = 4
+		}
+	}
+
+	prerequisites = {
+		tech_dm_stronghold
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+	}
+
+	upgrades = {
+		building_alpha_imperial_concession_port
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+## TOXIC KNIGHTS ##
+
+building_delta_knightly_theme_park = {
+	icon = building_giga_fortress_dm
+
+	base_buildtime = 480
+	#icon = building_order_holding
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = amenity
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_origin = origin_toxic_knights
+			NOT = { has_country_flag = quest_abandoned }
+		}
+	}
+
+	allow = {
+		num_pops >= 50
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 50
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 1000
+			sr_dark_matter = 200
+			acot_sr_dark_energy = 200
+		}
+		produces = {
+			energy = 50
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = planet.owner
+		}
+		text = knightly_theme_park_quest_effect_desc
+	}
+
+	prerequisites = {
+		tech_dm_stronghold
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		has_origin = origin_toxic_knights
+	}
+
+	upgrades = {
+		building_alpha_knightly_theme_park
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+## Pharmaceutical Companies ##
+building_delta_corporate_clinics = {
+	base_buildtime = 480
+	icon = building_fe_hospital
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = resource
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { has_valid_civic = civic_private_healthcare_corporate }
+	}
+
+	on_built = {
+		planet = {
+			set_planet_flag = has_private_clinics
+		}
+	}
+
+	on_destroy = {
+		planet = {
+			remove_planet_flag = has_private_clinics
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			branch_office_owner = { is_criminal_syndicate = yes }
+		}
+		planet_crime_add = 100
+	}
+	planet_modifier = {
+		job_acot_apothecary_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 1000
+			sr_dark_matter = 200
+			acot_sr_dark_energy = 200
+		}
+		produces = {
+			energy = 40
+			unity = 10
+		}
+		upkeep = {
+			sr_dark_matter = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = planet.owner
+		}
+		text = building_corporate_clinics_effect
+	}
+
+	prerequisites = {
+		tech_fe_hospital
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		has_valid_civic = civic_private_healthcare_corporate
+	}
+
+	upgrades = {
+		building_alpha_corporate_clinics
+	}
+
+	ai_weight = {
+		weight = 120
+	}
+}

@@ -1,0 +1,6 @@
+on_yearly_pulse_country = {
+	events = {
+        acot_merc_helper.1
+        acot_merc_helper.2
+	}
+}

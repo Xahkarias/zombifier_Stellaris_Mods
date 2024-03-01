@@ -1,0 +1,39 @@
+decision_alpha_necrophage_early = {
+		owned_planets_only = yes
+		icon = building_chamber_of_elevation_2
+		enactment_time = 360
+		resources = {
+				category = decisions
+				cost = {
+						influence = 100
+						unity = 1000
+						energy = 10000
+						sr_dark_matter = 1000
+						acot_sr_dark_energy = 1000
+				}
+		}
+		potential = {
+				OR = {
+					has_building = building_alpha_necrophage_elevation_chamber
+					has_building = building_phanon_necrophage_elevation_chamber
+					has_building = building_stellarite_necrophage_elevation_chamber
+				}
+		}
+		allow = {
+			NOT = {
+				has_modifier = acot_dlc_be_insta_necrophage_cooldown
+			}
+			num_assigned_jobs = {
+				job = necro_apprentice
+				value >= 1
+			}
+		}
+		effect = {
+			planet_event = {
+				id = acot_dlc_be_events.1
+			}
+		}
+		ai_weight = {
+				weight = 5
+		}
+}

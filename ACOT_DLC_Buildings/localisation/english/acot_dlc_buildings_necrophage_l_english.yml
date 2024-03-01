@@ -1,0 +1,15 @@
+﻿l_english:
+  # NECROPHAGE BUILDINGS
+  building_delta_necrophage_elevation_chamber: "House of Apotheosis - Delta Expansion Wing"
+  building_delta_necrophage_elevation_chamber_desc: "Applications of Dark Matter technology allows for the construction of an expansion wing to the House of Apotheosis, doubling its size."
+  building_alpha_necrophage_elevation_chamber: "House of Apotheosis - Alpha Expansion Wing"
+  building_alpha_necrophage_elevation_chamber_desc: "Dark Energy-powered ascension chambers can process even more acolytes. And with an infusion of extra resources, it is possible to trigger the ascension process at any time."
+  building_phanon_necrophage_elevation_chamber: "House of Apotheosis - Runic Expansion Wing"
+  building_phanon_necrophage_elevation_chamber_desc: "Runic Energy expands the wing's inner space, making it even bigger than the main house now."
+  building_stellarite_necrophage_elevation_chamber: "House of Apotheosis - Sigma Expansion Wing"
+  building_stellarite_necrophage_elevation_chamber_desc: "Under the light of the first sun, all shall become the One."
+  # ALPHA ASCENSION EVENTS
+  decision_alpha_necrophage_early: "Initiate Alpha Ascension"
+  decision_alpha_necrophage_early_desc: "Begin the Alpha Ascension process to immediately ascend all current acolytes. Has a five-years cooldown independent of the usual 10 years free ascension."
+  acot_dlc_be_insta_necrophage_cooldown: "Alpha Ascension Cooldown"
+  acot_dlc_be_events.1.name: "Alpha Ascension"

@@ -1,0 +1,25 @@
+namespace = acot_corp_ai_helper
+# WIP Not working yet
+planet_event = {
+	id = acot_corp_ai_helper.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	pre_triggers = {
+		has_owner = yes
+	}
+
+	trigger = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {
+			is_ai = yes
+			is_playable_country = yes
+		}
+	}
+
+	immediate = {
+		acot_corp_upgrade_to_delta_building = yes
+	}
+}

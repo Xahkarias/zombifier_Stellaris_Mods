@@ -1,0 +1,520 @@
+# Servitors sanctuary buildings
+# TODO: ADD ICONS
+building_delta_organic_sanctuary = {
+    icon = building_fe_dome
+	base_buildtime = 520
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = civic_machine_servitor }
+	}
+
+	allow = {
+		has_enigmatic_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = { owner = { has_valid_civic = civic_machine_servitor } }
+	}
+
+	convert_to = {
+		building_fe_mansion
+		building_fe_hive_depot
+		building_dm_ancient_cryo_chamber
+	}
+
+	prerequisites = {
+		tech_dark_mansion
+	}
+
+	show_tech_unlock_if = {
+		owner = {
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+
+	planet_modifier = {
+		job_bio_trophy_add = 40
+		job_acot_artisan_add = 2
+		job_maintenance_drone_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				has_modifier = acot_modifier_ascended_city
+			}
+			unity = 15
+		}
+		cost = {
+			minerals = 450
+			sr_dark_matter = 50
+		}
+		upkeep = {
+			trigger = {
+				has_modifier = acot_modifier_ascended_city
+			}
+			acot_sr_dark_energy = 1
+			sr_dark_matter = 1
+		}
+	}
+
+	triggered_desc = {
+		text = job_bio_trophy_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_artisan_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_maintenance_drone_effect_desc
+	}
+
+	upgrades = {
+		building_alpha_organic_sanctuary
+	}
+
+	# Here we try to adress the second issue that the AI cant evaluate the pop job output of the bio trophy given the happiness trigger that was put inplace to guard against players exploiting bio trophies
+
+	#science
+	ai_resource_production = {
+		unity = 40
+		physics_research = 40
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 200
+				type = produces
+			}
+		}
+	}
+
+	#alloys
+	ai_resource_production = {
+		unity = 40
+		alloys = 40
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = alloys
+				value >= 200
+				type = produces
+			}
+		}
+	}
+
+	#cgs
+	ai_resource_production = {
+		unity = 40
+		consumer_goods = 40
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 200
+				type = produces
+			}
+		}
+	}
+}
+
+building_alpha_organic_sanctuary = {
+    icon = building_ae_sky_dome
+	base_buildtime = 520
+	can_build = no
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = civic_machine_servitor }
+	}
+
+	allow = {
+		has_ascended_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = { owner = { has_valid_civic = civic_machine_servitor } }
+	}
+
+	convert_to = {
+		building_ae_mansion
+		building_ae_hive_depot
+		building_ae_ancient_cryo_chamber
+	}
+
+	prerequisites = {
+		tech_ae_dark_mansion
+	}
+
+	show_tech_unlock_if = {
+		owner = {
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+
+	planet_modifier = {
+		job_bio_trophy_add = 80
+		job_acot_artisan_add = 4
+		job_maintenance_drone_add = 4
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				has_modifier = acot_modifier_ascended_city
+			}
+			unity = 30
+		}
+		cost = {
+			minerals = 50
+			sr_dark_matter = 450
+		}
+		upkeep = {
+			trigger = {
+				has_modifier = acot_modifier_ascended_city
+			}
+			acot_sr_dark_energy = 2
+			sr_dark_matter = 2
+		}
+	}
+
+	triggered_desc = {
+		text = job_bio_trophy_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_artisan_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_maintenance_drone_effect_desc
+	}
+
+	upgrades = {
+		building_phanon_organic_sanctuary
+	}
+
+	# Here we try to adress the second issue that the AI cant evaluate the pop job output of the bio trophy given the happiness trigger that was put inplace to guard against players exploiting bio trophies
+
+	#science
+	ai_resource_production = {
+		unity = 80
+		physics_research = 80
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 400
+				type = produces
+			}
+		}
+	}
+
+	#alloys
+	ai_resource_production = {
+		unity = 80
+		alloys = 80
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = alloys
+				value >= 400
+				type = produces
+			}
+		}
+	}
+
+	#cgs
+	ai_resource_production = {
+		unity = 80
+		consumer_goods = 80
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 400
+				type = produces
+			}
+		}
+	}
+}
+
+building_phanon_organic_sanctuary = {
+    icon = building_phanon_sky_dome
+	base_buildtime = 900
+	can_build = no
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = civic_machine_servitor }
+        NOT = {
+            has_global_flag = aot_phanon_content_OFF
+        }
+	}
+
+	allow = {
+		has_phanon_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = { owner = { has_valid_civic = civic_machine_servitor } }
+	}
+
+	convert_to = {
+		building_phanon_mansion
+		building_phanon_hive_depot
+		building_phanon_ancient_cryo_chamber
+	}
+
+	prerequisites = {
+		tech_phanon_mansion
+	}
+
+	show_tech_unlock_if = {
+		owner = {
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+
+	planet_modifier = {
+		job_bio_trophy_add = 160
+		job_phanon_artisan_add = 4
+		job_maintenance_drone_add = 8
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				has_modifier = acot_modifier_ascended_city
+			}
+			unity = 60
+		}
+		cost = {
+			energy = 2000
+			minerals = 2000
+			aot_sr_runic_power = 800
+		}
+		upkeep = {
+			aot_sr_runic_power = 10
+			sr_dark_matter = 2			#Mod Pack: added upkeep
+			acot_sr_dark_energy = 2			#Mod Pack: added upkeep
+		}
+	}
+
+	triggered_desc = {
+		text = job_bio_trophy_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_artisan_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_maintenance_drone_effect_desc
+	}
+
+	upgrades = {
+		building_stellarite_organic_sanctuary
+	}
+
+	# Here we try to adress the second issue that the AI cant evaluate the pop job output of the bio trophy given the happiness trigger that was put inplace to guard against players exploiting bio trophies
+
+	#science
+	ai_resource_production = {
+		unity = 160
+		physics_research = 160
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 800
+				type = produces
+			}
+		}
+	}
+
+	#alloys
+	ai_resource_production = {
+		unity = 160
+		alloys = 160
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = alloys
+				value >= 800
+				type = produces
+			}
+		}
+	}
+
+	#cgs
+	ai_resource_production = {
+		unity = 160
+		consumer_goods = 160
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 800
+				type = produces
+			}
+		}
+	}
+}
+
+building_stellarite_organic_sanctuary = {
+    icon = building_stellarite_sky_dome
+	base_buildtime = 900
+	can_build = no
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = civic_machine_servitor }
+	}
+
+	allow = {
+		has_stellarite_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = { owner = { has_valid_civic = civic_machine_servitor } }
+	}
+
+	convert_to = {
+		building_stellarite_mansion
+		building_stellarite_hive_depot
+		building_stellarite_ancient_cryo_chamber
+	}
+
+	prerequisites = {
+		tech_stellarite_mansion
+	}
+
+	show_tech_unlock_if = {
+		owner = {
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+
+	planet_modifier = {
+		job_bio_trophy_add = 320
+		job_stellarite_artisan_add = 4
+		job_maintenance_drone_add = 16
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				has_modifier = acot_modifier_ascended_city
+			}
+			unity = 120
+		}
+		cost = {
+			energy = 4000
+			minerals = 4000
+			acot_sr_stellarite = 800
+		}
+		upkeep = {
+			energy = 20
+			acot_sr_stellarite = 10
+		}
+	}
+
+	triggered_desc = {
+		text = job_bio_trophy_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_artisan_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_maintenance_drone_effect_desc
+	}
+
+	# Here we try to adress the second issue that the AI cant evaluate the pop job output of the bio trophy given the happiness trigger that was put inplace to guard against players exploiting bio trophies
+
+	#science
+	ai_resource_production = {
+		unity = 320
+		physics_research = 320
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 1600
+				type = produces
+			}
+		}
+	}
+
+	#alloys
+	ai_resource_production = {
+		unity = 320
+		alloys = 320
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = alloys
+				value >= 1600
+				type = produces
+			}
+		}
+	}
+
+	#cgs
+	ai_resource_production = {
+		unity = 320
+		consumer_goods = 320
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 1600
+				type = produces
+			}
+		}
+	}
+}

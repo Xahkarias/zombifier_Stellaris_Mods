@@ -1,0 +1,2 @@
+acot_dlc_be_insta_necrophage_cooldown = {
+}

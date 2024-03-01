@@ -1,0 +1,86 @@
+﻿l_english:
+  #### MEGACORP ###
+  building_stellarite_mineral_corp: "Stellarite Purification Consortium"
+  building_stellarite_mineral_corp_desc: "The addition of Stellarite power allows for never before seen efficiency in mineral purification. Soon, the entire planet will be stripmined and sold for massive profit."
+
+  building_stellarite_food_corp: "Stellarite Fast Food Gigaplex"
+  building_stellarite_food_corp_desc: "Our new proprietary formulas are guaranteed to blow your digestive tracts* away regardless of your biological makeup! *Do not consume if pregnant or allergic to Stellarite power."
+
+  building_stellarite_consumer_goods_corp: "Stellarite Hard-Light Entertainment Complex"
+  building_stellarite_consumer_goods_corp_desc: "The Stellarite-powered hard-light constructors are capable of producing mountains of luxuries in microseconds. Our products will soon be in the hands of every customer on the planet."
+
+  building_stellarite_alloy_corp: "Private Stellarite Foundries"
+  building_stellarite_alloy_corp_desc: "The alloy foundries have been augmented with Stellarite power, capable of synthesizing enough alloys to plate the entire planet in metal plating."
+
+  building_stellarite_army_corp: "Stellarite Military Compound"
+  building_stellarite_army_corp_desc: "Stellarite-powered equipments has allowed even just single mercenary to defeat entire legions of planetary defense armies at a time. This planet's military force belongs to the corporation now."
+
+  building_stellarite_unity_corp: "DAI-Multidim-PR-Core"
+  building_stellarite_unity_corp_desc: "Augmented with Stellarite power, the AI running this facility can handle entire galaxies' worth of PR concerns and customer support tickets. Being put on hold is a thing of the past."
+
+  building_stellarite_research_corp: "Stellarite Research Institutes"
+  building_stellarite_research_corp_desc: "Packed to the brim with Stellarite-powered facilities and equipment, our corporate researchers will be able to discover the theory of everything, and how best to monetize it."
+
+  building_stellarite_amenity_corp: "Amusement Dimensional-Dome"
+  building_stellarite_amenity_corp_desc: "Stellarite power brings forth entertainment through all of space and time."
+
+  building_stellarite_trade_corp: "Sigma Trade Summit"
+  building_stellarite_trade_corp_desc: "Multi-dimensional meeting rooms and Stellarite assistant AIs allow for trade deals so esoteric and lucrative that no one, not even the CEOs that drafted them, could possibly comprehend."
+
+  building_stellarite_embassy_corp: "Stellarite Corporate Embassy"
+  building_stellarite_embassy_corp_desc: "The Stellarite-powered embassy building is capable of individually targeting every incoming ambassadors with targeted advertisements and psychological manipulations, ensure that the power and wealth of our company permeates to their very core."
+
+  ### CRIMINALS SYNDICATE ###
+
+  building_stellarite_mineral_crim: "Stellarite Purification Operations"
+  building_stellarite_mineral_crim_desc: "The addition of Stellarite power allows for never before seen efficiency in mineral purification. Soon, the entire planet will be stripmined and sold for massive profit."
+
+  building_stellarite_food_crim: "Bio-Reprocessing Giga-Complex"
+  building_stellarite_food_crim_desc: "Stellarite power ensures an infinite supply of recycled foodstuff from employees who outlived their usefulness, especially those who keep asking where the food came from."
+
+  building_stellarite_consumer_goods_crim: "Stellarite Drug Lab"
+  building_stellarite_consumer_goods_crim_desc: "Drugs laced with Stellarite power promise to take their users on a trip through all of space and time. Whether they come back though is a different story."
+
+  building_stellarite_alloy_crim: "Stellarite Wrecking Yard"
+  building_stellarite_alloy_crim_desc: "The wrecking foundries have been augmented with Stellarite power, capable of synthesizing enough alloys to plate the entire planet in metal plating."
+
+  building_stellarite_army_crim: "Sigma Pirate Compound"
+  building_stellarite_army_crim_desc: "Stellarite-powered equipments has allowed even just single pirate to defeat entire legions of planetary defense armies at a time. This planet's military force belongs to the corporation now."
+
+  building_stellarite_unity_crim: "Sigma Syndicate Front"
+  building_stellarite_unity_crim_desc: "Augmented with Stellarite power, the AI running this facility can handle entire galaxies' worth of PR concerns and front operations. No longer will the populace question our legitimacy.."
+
+  building_stellarite_research_crim: "Illicit Stellarite Labs"
+  building_stellarite_research_crim_desc: "Packed to the brim with Stellarite-powered facilities and equipment, our underground researchers will be able to discover the theory of everything, and how best to monetize it."
+
+  building_stellarite_amenity_crim: "Underground Solarite Villa"
+  building_stellarite_amenity_crim_desc: "Stellarite power brings forth entertainment through all of space and time."
+
+  building_stellarite_trade_crim: "Smugglers' Stellarite Bastion"
+  building_stellarite_trade_crim_desc: "Multi-dimensional smuggling ports and Stellarite assistant AIs allow for trade deals so esoteric and lucrative that no one, not even the smugglers that drafted them, could possibly comprehend."
+
+  building_stellarite_embassy_crim: "Stellarite Disinformation Complex"
+  building_stellarite_embassy_crim_desc: "The Stellarite-powered embassy building is capable of individually targeting every individuals on the planet with targeted advertisements and psychological manipulations, ensure that the power and wealth of our company permeates to their very core."
+
+  ### GOSPEL OF THE MASSES ###
+  building_stellarite_gospel_corp: "Prosperity Solarite Cathedral"
+  building_stellarite_gospel_corp_desc: "The tremendous power that Stellarite power holds allows us to connect closer to the divine than ever before. We shall profit amongst them as equals!"
+
+  building_stellarite_gospel_crim: "Subversive Solarite Cathedral"
+  building_stellarite_gospel_crim_desc: "The tremendous power that Stellarite power holds allows us to connect closer to the divine than ever before. We shall profit amongst them as equals!"
+
+  ### SPECIAL ###
+  building_stellarite_executive_retreat: "Stellarite Executive Villa"
+  building_stellarite_executive_retreat_desc: "This Stellarite-powered villa ensures our executives can have thousands of years' worth of relaxation in a mere few hours of real-time."
+
+  building_stellarite_xeno_tourism_agency: "Sigma Xeno-Outreach Agency"
+  building_stellarite_xeno_tourism_agency_desc: "Holographic displays showcasing the power and wealth granted by Stellarite power ensure every xenos will want to come and contribute to our great corporate empire."
+
+  building_stellarite_imperial_concession_port: "Stellarite Concession Fortress"
+  building_stellarite_imperial_concession_port_desc: "Holographic displays showcasing the power and wealth granted by Stellarite power ensure every vassals will cower in fear under the Imperium."
+
+  building_stellarite_knightly_theme_part: "Sigma Knightly Grounds"
+  building_stellarite_knightly_theme_part_desc: "Armed and armored with Stellarite power, our knights, and the tales of their valor, will be utterly unstoppable."
+
+  building_stellarite_corporate_clinics: "Corporate Stellarite Medication Center"
+  building_stellarite_corporate_clinics_desc: "There is no diseases and ailments that Stellarite power cannot cure and inoculate the body against. Provided the customer is willing to pay."
