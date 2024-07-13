@@ -4,7 +4,7 @@
 
 ## REGULAR MEGACORP ##
 building_delta_mineral_corp = {
-	icon = building_fe_mineral_processing_plant
+	icon = building_acot_dm_mineral_processing_plant
 
 	base_buildtime = 360
 
@@ -40,7 +40,7 @@ building_delta_mineral_corp = {
 	}
 
 	prerequisites = {
-		tech_fe_mineral_processing_plant
+		tech_acot_dm_mineral_processing_plant
 	}
 
 	show_tech_unlock_if = {
@@ -58,7 +58,7 @@ building_delta_mineral_corp = {
 }
 
 building_delta_food_corp = {
-	icon = building_fe_food_processing_complex
+	icon = building_acot_dm_food_processing_complex
 
 	base_buildtime = 360
 
@@ -95,7 +95,7 @@ building_delta_food_corp = {
 	}
 
 	prerequisites = {
-		tech_fe_food_processing
+		tech_acot_dm_food_processing
 	}
 
 	show_tech_unlock_if = {
@@ -113,7 +113,7 @@ building_delta_food_corp = {
 }
 
 building_delta_consumer_goods_corp = {
-	icon = building_fe_factory
+	icon = building_acot_dm_factory
 
 	base_buildtime = 360
 
@@ -147,7 +147,7 @@ building_delta_consumer_goods_corp = {
 	}
 
 	prerequisites = {
-		tech_fe_factory
+		tech_acot_dm_factory
 	}
 
 	show_tech_unlock_if = {
@@ -183,7 +183,7 @@ building_delta_consumer_goods_corp = {
 }
 
 building_delta_alloy_corp = {
-	icon = building_fe_alloy_forge
+	icon = building_acot_dm_alloy_forge
 
 	base_buildtime = 360
 
@@ -219,7 +219,7 @@ building_delta_alloy_corp = {
 	}
 
 	prerequisites = {
-		tech_fe_alloy_foundry
+		tech_acot_dm_alloy_foundry
 	}
 
 	show_tech_unlock_if = {
@@ -237,7 +237,7 @@ building_delta_alloy_corp = {
 }
 
 building_delta_army_corp = {
-	icon = building_dm_stronghold
+	icon = building_acot_dm_stronghold
 
 	base_buildtime = 360
 
@@ -261,7 +261,7 @@ building_delta_army_corp = {
 	}
 
 	planet_modifier = {
-		job_acot_enforcer_add = 1
+		job_acot_soldier_add = 1
 	}
 
 	resources = {
@@ -279,7 +279,7 @@ building_delta_army_corp = {
 	}
 
 	prerequisites = {
-		"tech_dm_stronghold"
+		"tech_acot_dm_stronghold"
 	}
 
 	show_tech_unlock_if = {
@@ -351,7 +351,7 @@ building_delta_unity_corp = {
 }
 
 building_delta_research_corp = {
-	icon = building_enigmatic_lab
+	icon = building_acot_dm_enigmatic_lab
 
 	base_buildtime = 480
 	base_cap_amount = 1
@@ -389,7 +389,7 @@ building_delta_research_corp = {
 	}
 
 	prerequisites = {
-		tech_enigmatic_lab
+		tech_acot_dm_enigmatic_lab
 	}
 
 	show_tech_unlock_if = {
@@ -443,7 +443,7 @@ building_delta_amenity_corp = {
 	}
 
 	prerequisites = {
-		tech_dark_mansion
+		tech_acot_dm_mansion
 	}
 
 	show_tech_unlock_if = {
