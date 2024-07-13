@@ -586,7 +586,7 @@ building_delta_embassy_corp = {
 
 ## CRIME MEGACORP ##
 building_delta_mineral_crim = {
-	icon = building_fe_mineral_processing_plant
+	icon = building_acot_dm_mineral_processing_plant
 
 	base_buildtime = 360
 
@@ -622,7 +622,7 @@ building_delta_mineral_crim = {
 	}
 
 	prerequisites = {
-		tech_fe_mineral_processing_plant
+		tech_acot_dm_mineral_processing_plant
 	}
 
 	show_tech_unlock_if = {
@@ -640,7 +640,7 @@ building_delta_mineral_crim = {
 }
 
 building_delta_food_crim = {
-	icon = building_fe_food_processing_complex
+	icon = building_acot_dm_food_processing_complex
 
 	base_buildtime = 360
 
@@ -678,7 +678,7 @@ building_delta_food_crim = {
 	}
 
 	prerequisites = {
-		tech_fe_food_processing
+		tech_acot_dm_food_processing
 	}
 
 	show_tech_unlock_if = {
@@ -696,7 +696,7 @@ building_delta_food_crim = {
 }
 
 building_delta_consumer_goods_crim = {
-	icon = building_fe_factory
+	icon = building_acot_dm_factory
 
 	base_buildtime = 360
 
@@ -730,7 +730,7 @@ building_delta_consumer_goods_crim = {
 	}
 
 	prerequisites = {
-		tech_fe_factory
+		tech_acot_dm_factory
 	}
 
 	show_tech_unlock_if = {
@@ -766,7 +766,7 @@ building_delta_consumer_goods_crim = {
 }
 
 building_delta_alloy_crim = {
-	icon = building_fe_alloy_forge
+	icon = building_acot_dm_alloy_forge
 
 	base_buildtime = 360
 
@@ -802,7 +802,7 @@ building_delta_alloy_crim = {
 	}
 
 	prerequisites = {
-		tech_fe_alloy_foundry
+		tech_acot_dm_alloy_foundry
 	}
 
 	show_tech_unlock_if = {
@@ -820,7 +820,7 @@ building_delta_alloy_crim = {
 }
 
 building_delta_army_crim = {
-	icon = building_dm_stronghold
+	icon = building_acot_dm_stronghold
 
 	base_buildtime = 360
 
@@ -845,7 +845,7 @@ building_delta_army_crim = {
 
 	planet_modifier = {
 		planet_crime_add = 160
-		job_acot_enforcer_add = 1
+		job_acot_soldier_add = 1
 	}
 
 	resources = {
@@ -863,7 +863,7 @@ building_delta_army_crim = {
 	}
 
 	prerequisites = {
-		"tech_dm_stronghold"
+		"tech_acot_dm_stronghold"
 	}
 
 	show_tech_unlock_if = {
@@ -936,7 +936,7 @@ building_delta_unity_crim = {
 }
 
 building_delta_research_crim = {
-	icon = building_enigmatic_lab
+	icon = building_acot_dm_enigmatic_lab
 
 	base_buildtime = 480
 	base_cap_amount = 1
@@ -975,7 +975,7 @@ building_delta_research_crim = {
 	}
 
 	prerequisites = {
-		tech_enigmatic_lab
+		tech_acot_dm_enigmatic_lab
 	}
 
 	show_tech_unlock_if = {
@@ -1030,7 +1030,7 @@ building_delta_amenity_crim = {
 	}
 
 	prerequisites = {
-		tech_dark_mansion
+		tech_acot_dm_mansion
 	}
 
 	show_tech_unlock_if = {
@@ -1170,7 +1170,7 @@ building_delta_embassy_crim = {
 ## GOSPEL MEGACORP ##
 
 building_delta_gospel_corp = {
-	icon = building_aot_fe_empyrean_shrine
+	icon = building_acot_dm_temple
 
 	base_buildtime = 360
 	base_cap_amount = 1
@@ -1208,7 +1208,7 @@ building_delta_gospel_corp = {
 	}
 
 	prerequisites = {
-		tech_aot_fe_empyrean_shrine
+		tech_acot_dm_temple
 	}
 
 	show_tech_unlock_if = {
@@ -1226,7 +1226,7 @@ building_delta_gospel_corp = {
 }
 
 building_delta_gospel_crim = {
-	icon = building_aot_fe_empyrean_shrine
+	icon = building_acot_dm_temple
 
 	base_buildtime = 360
 	base_cap_amount = 1
@@ -1265,7 +1265,7 @@ building_delta_gospel_crim = {
 	}
 
 	prerequisites = {
-		tech_aot_fe_empyrean_shrine
+		tech_acot_dm_temple
 	}
 
 	show_tech_unlock_if = {
@@ -1285,7 +1285,7 @@ building_delta_gospel_crim = {
 ## SPECIAL ##
 
 building_delta_executive_retreat = {
-	icon = building_fe_mansion
+	icon = building_acot_dm_mansion
 
 	base_buildtime = 600
 	base_cap_amount = 1
@@ -1328,7 +1328,7 @@ building_delta_executive_retreat = {
 	}
 
 	prerequisites = {
-		tech_dark_mansion
+		tech_acot_dm_mansion
 	}
 
 	show_tech_unlock_if = {
@@ -1405,7 +1405,7 @@ building_delta_xeno_tourism_agency = {
 }
 
 building_delta_imperial_concession_port = {
-	icon = building_dm_ancient_palace
+	icon = building_acot_dm_ancient_palace
 
 	base_buildtime = 600
 	base_cap_amount = 1
@@ -1447,7 +1447,7 @@ building_delta_imperial_concession_port = {
 	}
 
 	prerequisites = {
-		tech_dm_stronghold
+		tech_acot_dm_stronghold
 	}
 
 	show_tech_unlock_if = {
